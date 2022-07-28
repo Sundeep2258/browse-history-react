@@ -1,3 +1,7 @@
+.list-container {
+  list-style-type: none;
+}
+
 .container {
   display: flex;
   /* justify-content: space-between; */
@@ -7,6 +11,8 @@
   padding: 10px;
   padding-left: 25px;
   padding-right: 45px;
+  flex-grow: 1;
+  align-items: stretch;
 }
 .domain-title {
   display: flex;
@@ -17,12 +23,13 @@
   margin-bottom: 10px;
   color: #475569;
   margin-right: 20px;
+  font-weight: bold;
 }
 .logo {
   height: 35px;
   margin-top: 10px;
   padding-top: 15px;
-  margin-right: 100px;
+  margin-right: 70px;
 }
 .domain {
   color: #64748b;
@@ -31,11 +38,11 @@
 .time {
   color: #475569;
   font-size: 15px;
-  margin-right: 100px;
+  margin-right: 70px;
 }
 .delete-img {
   color: red;
-  font-size: 20px;
+  font-size: 30px;
 }
 .button {
   cursor: pointer;
@@ -49,5 +56,14 @@
 .btn-container {
   display: flex;
   flex-direction: row;
+  align-items: flex-end;
+  align-self: flex-end;
   margin-left: 250px;
+}
+.last-one {
+  display: flex;
+  margin-right: 60px;
+}
+.first-three {
+  display: flex;
 }

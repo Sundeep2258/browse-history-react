@@ -98,21 +98,17 @@ class HistorySearch extends Component {
     })
   }
 
-  emptyView = () => {
-    const {historyList} = this.state
-
-    if (historyList.length === 0) {
-      return <p> There is nothing to show </p>
-    }
-    return <p> There is nothing to show </p>
-  }
-
   render() {
     const {searchInput, historyList} = this.state
 
     const searchResults = historyList.filter(eachHistoryItem =>
       eachHistoryItem.title.toLowerCase().includes(searchInput.toLowerCase()),
     )
+
+    // let emptyView
+    // if (searchInput.event.target.value === '' || historyList.length === 0) {
+    //   emptyView = <p> There is nothing to show </p>
+    // }
 
     return (
       <div>
@@ -146,7 +142,7 @@ class HistorySearch extends Component {
             />
           ))}
         </ul>
-        <div className="view">{this.emptyView()}</div>
+        {/* <div>{emptyView}</div> */}
       </div>
     )
   }
